@@ -20,19 +20,13 @@ contract FNXOracle is Operator {
         assetsMap[1] = AggregatorV3Interface(0x264990fbd0A4796A3E3d8E37C4d5F87a3aCa5Ebf);
         //ETH / USD
         assetsMap[2] = AggregatorV3Interface(0x9ef1B8c0E4F7dc8bF5719Ea496883DC6401d5b2e);
-        //MKR / ETH
-       // assetsMap[3] = AggregatorV3Interface();
-        //SNX / USD
-       // assetsMap[4] = AggregatorV3Interface();
-        //SNX / USD
-      //  assetsMap[5] = AggregatorV3Interface();
         //BNB / USD
         assetsMap[0] = AggregatorV3Interface(0x0567F2323251f0Aab15c8dFb1967E4e8A7D42aeE);
-        //FNX / USD
-       //assetsMap[uint256(0xeF9Cd7882c067686691B6fF49e650b43AFBBCC6B)] = AggregatorV3Interface(0x80070f7151BdDbbB1361937ad4839317af99AE6c);
 
+        //BNB USDT
+        assetsMap[uint256(0x55d398326f99059fF775485246999027B3197955)] = AggregatorV3Interface(0xB97Ad0E74fa7d920791E90258A6E2085088b4320);
         //USDC
-        priceMap[uint256(0x8ac76a51cc950d9822d68b83fe1ad97b32cd580d)] = 1e20;
+        priceMap[uint256(0x8AC76a51cc950d9822D68b83fE1Ad97B32Cd580d)] = 1e20;
 
         decimalsMap[0] = 18;
         decimalsMap[1] = 18;
@@ -41,9 +35,9 @@ contract FNXOracle is Operator {
         decimalsMap[4] = 18;
         decimalsMap[5] = 18;
         //FNX
-        decimalsMap[uint256()] = 18;
+        decimalsMap[uint256(0xdFd9e2A17596caD6295EcFfDa42D9B6F63F7B5d5)] = 18;
         //USDC
-        decimalsMap[uint256()] = 6;
+        decimalsMap[uint256(0x8AC76a51cc950d9822D68b83fE1Ad97B32Cd580d)] = 6;
     }
 
     function setDecimals(uint256 newDecimals) public onlyOwner{
