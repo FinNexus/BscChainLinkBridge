@@ -23,21 +23,27 @@ contract FNXOracle is Operator {
         //BNB / USD
         assetsMap[0] = AggregatorV3Interface(0x0567F2323251f0Aab15c8dFb1967E4e8A7D42aeE);
 
-        //BNB USDT
-        assetsMap[uint256(0x55d398326f99059fF775485246999027B3197955)] = AggregatorV3Interface(0xB97Ad0E74fa7d920791E90258A6E2085088b4320);
+        //BUSD-T/USD
+        assetsMap[uint256(0x55d398326f99059fF775485246999027B3197955)] = AggregatorV3Interface(0xcBb98864Ef56E9042e7d2efef76141f15731B82f);
+
+        //BUSD/USD
+        assetsMap[uint256(0xe9e7CEA3DedcA5984780Bafc599bD69ADd087D56)] = AggregatorV3Interface(0xB97Ad0E74fa7d920791E90258A6E2085088b4320);
+
         //USDC
-        priceMap[uint256(0x8AC76a51cc950d9822D68b83fE1Ad97B32Cd580d)] = 1e20;
+       // priceMap[uint256(0x8AC76a51cc950d9822D68b83fE1Ad97B32Cd580d)] = 1e20;
 
         decimalsMap[0] = 18;
         decimalsMap[1] = 18;
         decimalsMap[2] = 18;
-        decimalsMap[3] = 18;
-        decimalsMap[4] = 18;
-        decimalsMap[5] = 18;
+
         //FNX
         decimalsMap[uint256(0xdFd9e2A17596caD6295EcFfDa42D9B6F63F7B5d5)] = 18;
-        //USDC
-        decimalsMap[uint256(0x8AC76a51cc950d9822D68b83fE1Ad97B32Cd580d)] = 6;
+
+        //BUSD-T
+        decimalsMap[uint256(0x55d398326f99059fF775485246999027B3197955)] = 18;
+
+        //BUSD
+        decimalsMap[uint256(0xe9e7CEA3DedcA5984780Bafc599bD69ADd087D56)] = 18;
     }
 
     function setDecimals(uint256 newDecimals) public onlyOwner{
